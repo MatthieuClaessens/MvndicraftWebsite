@@ -8,21 +8,6 @@ const socialLinks = [
     { icon: TwitterIcon, href: "https://x.com/MVNDlCRAFT", label: "Follow on Twitter" },
     { icon: YoutubeIcon, href: "https://www.youtube.com/@mvndicraft4233", label: "Follow on YouTube" },
 ];
-
-const footerLinks = {
-    platform: [
-        { label: "Vote", href: "/https://www.planetminecraft.com/server/mvndicraft-medieval-geopol/" },
-        { label: "Rules", href: "https://wiki.mvndicraft.net/rules.html" },
-        { label: "Wiki", href: "https://wiki.mvndicraft.net" },        
-        { label: "Store", href: "https://www.patreon.com/Mvndicraft" },
-    ],
-    legal: [
-        { label: "Terms of Use", href: "/terms-of-use" },
-        { label: "Privacy Policy", href: "/privacy-policy" },
-        { label: "Contact", href: "/contact" },
-    ],
-};
-
 export default function Footer() {
     return (
         <footer className="w-full bg-[#080808] border-t border-[#1a1a1f] pt-16 md:pt-20 pb-10">
@@ -30,14 +15,12 @@ export default function Footer() {
 
                 <div className="col-span-2">
                     <h3 className="text-xl font-black uppercase tracking-wider text-white mb-6">Mvndicraft</h3>
-
                     <p className="text-[#FFD700] text-sm italic mb-2 font-serif">
-                        "Non nobis solum, sed omnibus."
+                        &quot;Non nobis solum, sed omnibus.&quot;
                     </p>
                     <p className="text-[#666] text-xs mb-6 border-l-2 border-[#FFD700] pl-3">
                         Not for ourselves alone, but for everyone.
                     </p>
-
                     <p className="text-[#666] text-sm max-w-sm mb-8 leading-relaxed">
                         United under one banner, we rise — to build, to give, to become legend.
                     </p>
@@ -51,22 +34,24 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {(Object.keys(footerLinks) as Array<keyof typeof footerLinks>).map((section) => (
-                    <div key={section} className="col-span-1">
-                        <h4 className="text-xs font-bold uppercase text-[#FFD700] tracking-[0.2em] mb-6">
-                            {section}
-                        </h4>
-                        <ul className="space-y-4">
-                            {footerLinks[section].map((link) => (
-                                <li key={link.label}>
-                                    <Link href={link.href} target="_blank" rel="noreferrer" className="text-sm text-[#888] hover:text-white transition-colors">
-                                        {link.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
+                <div className="col-span-1">
+                    <h4 className="text-xs font-bold uppercase text-[#FFD700] tracking-[0.2em] mb-6">Platform</h4>
+                    <ul className="space-y-4">
+                        <li><Link href="https://www.planetminecraft.com/server/mvndicraft-medieval-geopol/" target="_blank" rel="noreferrer" className="text-sm text-[#888] hover:text-white transition-colors">Vote</Link></li>
+                        <li><Link href="https://wiki.mvndicraft.net/rules.html" target="_blank" rel="noreferrer" className="text-sm text-[#888] hover:text-white transition-colors">Rules</Link></li>
+                        <li><Link href="https://wiki.mvndicraft.net" target="_blank" rel="noreferrer" className="text-sm text-[#888] hover:text-white transition-colors">Wiki</Link></li>
+                        <li><Link href="https://www.patreon.com/Mvndicraft" target="_blank" rel="noreferrer" className="text-sm text-[#888] hover:text-white transition-colors">Store</Link></li>
+                    </ul>
+                </div>
+
+                <div className="col-span-1">
+                    <h4 className="text-xs font-bold uppercase text-[#FFD700] tracking-[0.2em] mb-6">Legal</h4>
+                    <ul className="space-y-4">
+                        <li><Link href="/terms-of-use" className="text-sm text-[#888] hover:text-white transition-colors">Terms of Use</Link></li>
+                        <li><Link href="/privacy-policy" className="text-sm text-[#888] hover:text-white transition-colors">Privacy Policy</Link></li>
+                        <li><Link href="/contact" className="text-sm text-[#888] hover:text-white transition-colors">Contact</Link></li>
+                    </ul>
+                </div>
 
             </div>
 

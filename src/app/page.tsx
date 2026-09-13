@@ -15,7 +15,6 @@ export default function Home() {
       <Discover/>
       <Playlist/>
       <BentoGallery aria-label="Game Features Gallery"/>
-      <News aria-label="Latest News and Updates"/>
       <ForgeKingdom/>
       <CTA/>
     </main>
