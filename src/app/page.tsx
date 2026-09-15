@@ -1,6 +1,5 @@
 "use client";
 
-import News from "@/app/components/News/News";
 import Heading from "@/app/components/Heading";
 import Discover from "@/app/components/Discover";
 import BentoGallery from "@/app/components/BentoGallery";
