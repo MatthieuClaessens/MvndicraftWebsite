@@ -82,7 +82,7 @@ export default function NavBar() {
                     
                     <div className="hidden md:flex gap-6 text-xs uppercase items-center font-black tracking-widest">
                         <Link href="/" className="hover:text-[#FFD700] transition-colors px-2 py-1 rounded">Home</Link>
-                        <Link href="https://www.planetminecraft.com/server/mvndicraft-medieval-geopol/" target="_blank" rel="noreferrer" className="hover:text-[#FFD700] transition-colors px-2 py-1 rounded">Vote</Link>
+                        <Link href="/vote" className="hover:text-[#FFD700] transition-colors px-2 py-1 rounded">Vote</Link>
                         <Link href="https://wiki.mvndicraft.net/rules.html" target="_blank" rel="noreferrer" className="hover:text-[#FFD700] transition-colors px-2 py-1 rounded">Rules</Link>
                         <Link href="https://wiki.mvndicraft.net/" target="_blank" rel="noreferrer" className="hover:text-[#FFD700] bg-[#26262a] px-6 py-2 rounded-md transition-all">Wiki</Link>
                         <Link href="https://www.patreon.com/Mvndicraft" target="_blank" rel="noreferrer" className="border border-[#FFD700] flex px-6 py-2 hover:bg-[#FFD700] hover:text-black transition-all items-center rounded-md">
